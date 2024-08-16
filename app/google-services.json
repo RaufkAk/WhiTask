@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "939398436056",
+    "project_id": "whitask-df03b",
+    "storage_bucket": "whitask-df03b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:939398436056:android:427da48e26293db2a1f3ad",
+        "android_client_info": {
+          "package_name": "com.raufkutayakyildiz.myapplication"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0C2S6rnpAivrlEXn8J2yEq4pQeDLz2UU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

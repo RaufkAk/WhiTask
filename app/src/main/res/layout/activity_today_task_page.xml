@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Pages.TodayTaskPage"
+   >
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dp"
+        android:onClick="AddTaskButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/plusbutton" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="ProfileButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/profilephoto" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="CalendarButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/calendarphoto" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="SettingsButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/settingsphoto"
+        android:contentDescription="Settings Button"/>
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="LogOut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintTop_toTopOf="@+id/imageView2"
+        app:srcCompat="@drawable/signoutphoto"
+        android:contentDescription="Log Out Button"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DateText" />
+
+    <TextView
+        android:id="@+id/DateText"
+        android:layout_width="313dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="30dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2D2D2D"
+    tools:context=".Pages.MainActivity">
+
+
+    <EditText
+        android:id="@+id/PasswordText"
+        android:layout_width="288dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="100dp"
+        android:paddingLeft="10dp"
+        android:background="#0B262A"
+        android:ems="10"
+        android:hint="Enter password"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailText" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="191dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/vitask" />
+
+    <EditText
+        android:id="@+id/EmailText"
+        android:layout_width="288dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="100dp"
+        android:background="#0B262A"
+        android:ems="10"
+        android:paddingLeft="10dp"
+        android:hint="Enter email"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="125dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:text="Email"
+        android:textColor="#5BC569"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="125dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:text="Password"
+        android:textColor="#5BC569"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EmailText" />
+
+    <Button
+        android:id="@+id/SıgnInButton"
+        android:layout_width="93dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#0B262A"
+        android:onClick="signInButton"
+        android:text="Sign In"
+        android:textColor="#5BC569"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordText" />
+
+    <Button
+        android:id="@+id/SıgnUpButton"
+        android:layout_width="99dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#0B262A"
+        android:onClick="signUpButton"
+        android:text="Sign Up"
+        android:textColor="#5BC569"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PasswordText" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
