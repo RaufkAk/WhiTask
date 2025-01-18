@@ -10,6 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:hint="Task Name"
+        android:fontFamily="sans-serif"
         android:inputType="text"/>
 
     <EditText
@@ -17,5 +18,6 @@
         android:layout_width="match_parent"
         android:layout_height="61dp"
         android:hint="Time (e.g 09.00-10.00)"
+        android:fontFamily="sans-serif"
         android:inputType="text"/>
 </LinearLayout>

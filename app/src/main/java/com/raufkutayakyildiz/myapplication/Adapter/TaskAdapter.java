@@ -40,17 +40,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         this.todayDate = Date.getCurrentDate();
         getTasksFromDB();
     }
-
-    // Yeni bir görev eklemek için kullanılacak fonksiyon
     @RequiresApi(api = Build.VERSION_CODES.O)
     public void addTask(Task task) {
         Timestamp currentTimestamp = new Timestamp(new java.util.Date());
         task.setTimestamp(currentTimestamp); // Şu anki zaman damgasını ayarla
-
-        taskList.add(task); // Yeni görevi listeye ekleyin
-        taskListArr.add(task.getName() + " " + task.getTime()); // taskListArr'yi güncelleyin
-
-        // Firestore'a ekleme
+        taskList.add(task);
+        taskListArr.add(task.getName() + " " + task.getTime());
+        // Firestore'a eklediğim kısım
         db.collection(todayDate)
                 .add(task)
                 .addOnSuccessListener(documentReference -> {
@@ -75,11 +71,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
                             taskListArr.add(task.getName() + " " + task.getTime());
                         }
                     }
-                    notifyDataSetChanged(); // RecyclerView'ı güncelle
-                })
-                .addOnFailureListener(e -> {
-                    Log.e("TaskAdapter", "Error fetching data", e);
+                    notifyDataSetChanged();
                 });
+                
     }
 
     @NonNull
@@ -88,21 +82,15 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewHolder
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_row, parent, false);
         return new TaskViewHolder(view);
     }
-
     @Override
     public void onBindViewHolder(@NonNull TaskViewHolder holder, int position) {
-        String taskInfo = taskListArr.get(position); // taskListArr'yi kullanarak veriyi alın
+        String taskInfo = taskListArr.get(position);
         holder.checkBox.setText(taskInfo);
-
-        // Log ekleme:
-        Log.d("TaskAdapter", "onBindViewHolder: " + taskInfo);
     }
-
     @Override
     public int getItemCount() {
-        return taskListArr.size(); // taskListArr'ye göre öğe sayısını döndürün
+        return taskListArr.size();
     }
-
     public static class TaskViewHolder extends RecyclerView.ViewHolder {
         CheckBox checkBox;
 

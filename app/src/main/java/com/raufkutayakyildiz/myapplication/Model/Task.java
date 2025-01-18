@@ -17,7 +17,6 @@
         public Task() {
         }
 
-        // Getter ve setter metodları ekleyin
         public String getName() {
             return name;
         }

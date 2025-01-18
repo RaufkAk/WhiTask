@@ -57,11 +57,7 @@ import java.util.List;
 
             recyclerView.setLayoutManager(new LinearLayoutManager(this));
             recyclerView.setAdapter(taskAdapter);
-
-
         }
-
-
         public void LogOut(View view) {
             auth.signOut();
             Intent intentToSignout = new Intent(TodayTaskPage.this, MainActivity.class);
@@ -84,6 +80,7 @@ import java.util.List;
             builder.setTitle("Task Manager")
                     .setView(dialogView)
                     .setPositiveButton("Add Task", new DialogInterface.OnClickListener() {
+                        @RequiresApi(api = Build.VERSION_CODES.O)
                         @Override
                         public void onClick(DialogInterface dialogInterface, int i) {
                             String taskName = taskNameEditText.getText().toString();
@@ -121,11 +118,4 @@ import java.util.List;
             startActivity(intentToProfile);
             finish();
         }
-
-
-
-
-
-
-
     }

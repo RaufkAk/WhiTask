@@ -10,7 +10,7 @@ android {
 
     defaultConfig {
         applicationId = "com.raufkutayakyildiz.myapplication"
-        minSdk = 24
+        minSdk = 23
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -51,4 +51,7 @@ dependencies {
     implementation("com.google.firebase:firebase-storage")
     implementation(platform("com.google.firebase:firebase-bom:33.1.2"))
     implementation("com.google.firebase:firebase-firestore")
+    implementation ("com.github.bumptech.glide:glide:4.15.1")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
+
 }
