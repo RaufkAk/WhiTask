@@ -1,34 +1,23 @@
-# WhiTask
+# ✅ WhiTask
 
-WhiTask, Android için geliştirilmiş bir günlük görev ve yapılacaklar listesi uygulamasıdır. Firebase ile kimlik doğrulama, görev saklama ve fotoğraf depolama özellikleri sunar.
+**WhiTask** is a daily task & to-do list app for Android. It uses **Firebase** for authentication, task storage, and photo management, providing a simple and intuitive user experience.
 
-## Özellikler
-- Günlük görev ekleme, listeleme ve silme
-- Firebase Authentication ile kullanıcı girişi
-- Görevler için Firestore kullanımı
-- Fotoğraf ekleme ve Firebase Storage ile saklama
-- Modern ve kolay kullanılabilir arayüz
+---
 
-## Kurulum
-1. Bu repoyu klonlayın:
-	```bash
-	git clone https://github.com/RaufkAk/WhiTask.git
-	```
-2. Android Studio ile açın.
-3. `google-services.json` dosyasını kendi Firebase projenizden alın ve `app/` klasörüne ekleyin.
-4. Gerekli SDK ve bağımlılıkların yüklü olduğundan emin olun.
+## 🎯 Features
+- 📝 Add, list, and delete daily tasks  
+- 🔐 User login with Firebase Authentication  
+- ☁️ Task storage using Firebase Firestore  
+- 📸 Add photos to tasks and store them with Firebase Storage  
+- 🎨 Modern and easy-to-use interface  
 
-## Kullanılan Teknolojiler
-- Android SDK
-- Kotlin/Java
-- Firebase Authentication, Firestore, Storage
-- Glide (görsel yükleme)
+---
+🛠️ Technologies Used
+	•	Android SDK
+	•	Kotlin / Java
+	•	Firebase Authentication, Firestore, Storage
+	•	Glide (for image loading)
 
-## Başlangıç
-Uygulamayı çalıştırmak için Android Studio'da projeyi açıp bir emülatör veya gerçek cihazda başlatabilirsiniz.
+ 📄 License
 
-## Katkı
-Pull request ve issue açarak katkıda bulunabilirsiniz.
-
-## Lisans
-MIT
+This project is licensed under the MIT License.
